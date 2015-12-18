@@ -77,4 +77,16 @@ var ToshibaTV = function(){
 
 var sony = new SonyTV(),
     toshiba = new ToshibaTV(),
+    std_remote = new RemoteControl(sony),
+    pwr_remote = new PowerRemote(toshiba);
+ 
+    std_remote.on();
+    std_remote.setChannel(55);
+    std_remote.setChannel(20);
+    std_remote.off();
 
+    pwr_remote.on();
+    pwr_remote.setChannel(55);
+    pwr_remote.nextChanner();
+    pwr_remote.prevChanner();
+    pwr_remote.off();
